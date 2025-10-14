@@ -1,0 +1,80 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env.bak/
+
+# Environment files
+# Contains sensitive keys and config
+.env
+
+# Flask cache and instance files
+instance/
+*.db
+*.sqlite3
+
+# Logs and debug files
+*.log
+*.pot
+*.pyproj
+*.pid
+*.seed
+*.coverage
+.coverage.*
+.cache/
+logs/
+*.bak
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter / notebooks
+.ipynb_checkpoints
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Temporary / backup files
+ignore/
+*.tmp
+*.swp
+*.swo
+*~
