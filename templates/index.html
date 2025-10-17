@@ -10,8 +10,9 @@
             <div class="mb-3">
                 <label for="joke-type" class="form-label">Select Joke Type:</label>
                 <select name="joke-type" id="joke-type" class="form-select">
-                    <option value="tech-joke" selected>Tech Joke</option>
-                    <option value="family-joke">Family Friendly</option>
+                    {% for each_joke in alljokes %}
+                        <option value="{{ each_joke.url }}">{{ each_joke.name }}</option>
+                    {% endfor %}
                 </select>
             </div>
             <button type="submit" class="btn btn-primary btn-lg w-100">Get Random Joke</button>

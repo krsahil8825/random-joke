@@ -11,7 +11,7 @@ function formHandler() {
         const resultSection = document.getElementById("resultSection");
         const randomJokeDisplay = document.getElementById("randomJokeDisplay");
 
-        fetch(`/api/${jokeType}`, {
+        fetch(`${jokeType}`, {
             method: "GET",
         })
             .then((response) => response.json())
