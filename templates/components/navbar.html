@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm px-3 px-lg-5 w-100">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/">Random Joke</a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="/about">About</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a
+                        class="nav-link"
+                        href="https://krsahil8825.github.io/random-joke"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Docs</a
+                    >
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a
+                        class="btn btn-outline-secondary btn-sm rounded d-flex align-items-center w-fit"
+                        href="https://github.com/krsahil8825/random-joke"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="bi bi-github me-1"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,38 @@
+{% extends "./layout.html" %} 
+
+{% block title %}Random Joke | About{% endblock %} 
+
+{% block content %}
+<div class="w-100 d-flex flex-column align-items-center">
+    <div class="card shadow-lg p-4 rounded w-100" style="background-color: #1b1f23ff; color: #f8f9fa">
+        <div class="text-center mb-4">
+            <h2 class="card-title">About Random Joke</h2>
+            <p class="text-muted">Bringing laughter with tech and family-friendly jokes!</p>
+        </div>
+
+        <div class="card shadow p-4 rounded mt-3" style="background-color: #2d3339; color: #f8f9fa">
+            <h4 class="mb-3">What is this app?</h4>
+            <p>
+                The Random Joke is a fun web application built with Flask. It provides you with randomly generated 
+                jokes in two categories: tech jokes for the coding enthusiasts and family-friendly jokes for everyone to enjoy.
+            </p>
+
+            <h4 class="mt-4 mb-3">Features</h4>
+            <ul>
+                <li>Generate random tech jokes instantly</li>
+                <li>Get family-friendly jokes suitable for all ages</li>
+                <li>Dark mode friendly interface</li>
+                <li>Copy jokes to clipboard with one click</li>
+                <li>Responsive design for desktop and mobile</li>
+            </ul>
+
+            <h4 class="mt-4 mb-3">How it works</h4>
+            <p>
+                Select your preferred joke type (Tech Joke or Family Friendly) from the dropdown menu on the home page, 
+                click "Get Random Joke," and a random joke will appear instantly. You can then copy and share it with 
+                friends and colleagues to spread the laughter!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

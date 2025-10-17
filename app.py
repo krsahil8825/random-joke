@@ -74,7 +74,7 @@ Notes:
 from dotenv import load_dotenv
 from flask_cors import CORS
 from flask import Flask, jsonify, render_template
-from joke import tech_jokes, family_jokes
+from joke import get_random_joke, tech_jokes, family_jokes
 from os import getenv
 
 app = Flask(__name__)
@@ -84,21 +84,35 @@ CORS(app)
 @app.route("/", methods=["GET"])
 def home():
     """Serve the home page (index.html)."""
-    return render_template("index.html")
 
+    # List of available joke categories with their API endpoints
+    # to be displayed on the homepage for easy navigation.
+    alljokes_name_and_url = [
+        {"name": "Random Jokes", "url": "/api/random-joke"},
+        {"name": "Tech Jokes", "url": "/api/tech-joke"},
+        {"name": "Family Jokes", "url": "/api/family-joke"},
+    ]
+    return render_template("index.html", alljokes=alljokes_name_and_url)
 
+@app.route("/about", methods=["GET"])
 def about():
     """Serve the about page (about.html)."""
     return render_template("about.html")
 
 
+@app.route("/contact", methods=["GET"])
 def contact():
     """Serve the contact page (contact.html)."""
     return render_template("contact.html")
 
 
+@app.route("/api/random-joke", methods=["GET"])
+def random_joke():
+    """Return a JSON response with a random joke."""
+    return jsonify({"joke": get_random_joke()})
+
 @app.route("/api/tech-joke", methods=["GET"])
-def joke():
+def tech_joke():
     """Return a JSON response with a random tech joke."""
     return jsonify({"joke": tech_jokes.generate_joke()})
 

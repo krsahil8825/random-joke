@@ -1,0 +1,18 @@
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: -moz-hidden-unscrollable;
+}
+
+.min-vh-100 {
+    min-height: 100vh !important;
+}
+
+.w-fit {
+    width: fit-content !important;
+}
+
+#urlInput::placeholder {
+    color: #ffffff;
+    opacity: 0.75;
+}
