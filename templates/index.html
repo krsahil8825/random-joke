@@ -1,0 +1,36 @@
+{% extends "./layout.html" %} 
+
+{% block title %}Random Joke | Home{% endblock %} 
+
+{% block content %}
+<div class="w-100 d-flex flex-column align-items-center">
+    <div class="card shadow-lg p-4 rounded w-100 rounded shadow" style="background-color: #1b1f23ff; color: #f8f9fa">
+        <h3 class="card-title text-center mb-4">Random Joke</h3>
+        <form class="w-100" id="jokeForm">
+            <div class="mb-3">
+                <label for="joke-type" class="form-label">Select Joke Type:</label>
+                <select name="joke-type" id="joke-type" class="form-select">
+                    <option value="tech-joke" selected>Tech Joke</option>
+                    <option value="family-joke">Family Friendly</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100">Get Random Joke</button>
+        </form>
+    </div>
+
+    <div
+        class="card shadow mt-4 p-4 rounded w-100 text-center text-white"
+        id="resultSection"
+        style="background-color: #1b1f23ff; display: none;"
+    >
+        <h5 class="mb-3">🎉 Your random joke:</h5>
+        <p class="lead" id="randomJokeDisplay"></p>
+        <button class="btn btn-outline-light mt-2" id="copyBtn">Copy Joke</button>
+    </div>
+</div>
+
+{% endblock %} 
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

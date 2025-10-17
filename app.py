@@ -86,12 +86,13 @@ def home():
     """Serve the home page (index.html)."""
     return render_template("index.html")
 
-
+@app.route("/about", methods=["GET"])
 def about():
     """Serve the about page (about.html)."""
     return render_template("about.html")
 
 
+@app.route("/contact", methods=["GET"])
 def contact():
     """Serve the contact page (contact.html)."""
     return render_template("contact.html")
