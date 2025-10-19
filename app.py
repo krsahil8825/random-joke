@@ -75,7 +75,7 @@ from dotenv import load_dotenv
 from flask_cors import CORS
 from flask import Flask, jsonify, render_template
 from joke import get_random_joke, tech_jokes, family_jokes
-from os import getenv
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -125,5 +125,9 @@ def family_joke():
 
 if __name__ == "__main__":
     load_dotenv()
-    is_debug_mode = getenv("is_debug_mode", "False") == "True"
-    app.run(debug=is_debug_mode)
+    debug_mode = os.getenv("is_debug_mode", "False").lower() in ("true", "1", "t")
+
+    if debug_mode:
+        app.run(debug=True)
+    else:
+        app.run(host="0.0.0.0", port=5000)
