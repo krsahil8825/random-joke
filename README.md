@@ -98,6 +98,15 @@ python3 app.py
 
 By default the app serves on http://127.0.0.1:5000
 
+or 
+
+> Use a production server like Waitress:
+
+```bash
+waitress-serve --listen=0.0.0.0:8000 app:app
+```
+
+
 ## API Endpoints
 
 The application exposes three REST API endpoints that return JSON-formatted jokes:
